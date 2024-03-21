@@ -19,6 +19,15 @@ public class ProductRepo {
         return products;
     }
 
+    public Product getProduct(Product findProduct) {
+        for (Product product : this.products) {
+            if (product.equals(findProduct)) {
+                return findProduct;
+            }
+        }
+        return null;
+    }
+
     public void setProducts(List<Product> products) {
         this.products = products;
     }
@@ -45,5 +54,9 @@ public class ProductRepo {
 
     public void removeProduct(Product product) {
         this.products.remove(product);
+    }
+
+    public void removeProducts() {
+        this.products = null;
     }
 }
