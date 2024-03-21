@@ -55,4 +55,8 @@ public class OrderListRepo {
     public void removeProducts() {
         this.orders = null;
     }
+
+    public void addOrder(List<Order> order) {
+        this.orders.addAll(order);
+    }
 }
